@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Offline AI Chatbot</title>
+</head>
+<body>
+<h2>Offline AI Chatbot</h2>
+<input id="msg" placeholder="Type message">
+<button onclick="send()">Send</button>
+<pre id="response"></pre>
+
+<script>
+function send(){
+fetch("http://localhost:8000/chat", {
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({text:document.getElementById("msg").value})
+})
+.then(res=>res.json())
+.then(data=>{
+document.getElementById("response").innerText=JSON.stringify(data,null,2);
+});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Good morning"],
+      "responses": ["Hello!", "Hi there!"]
+    },
+    {
+      "tag": "project_info",
+      "patterns": ["Tell me about this project", "What is this system"],
+      "responses": ["This is an offline AI conversational agent built for a B.Tech project."]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you"],
+      "responses": ["Goodbye!", "See you soon."]
+    }
+  ]
+}
